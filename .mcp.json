@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mcp-playground": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["dist/server.js"]
+    }
+  }
+}

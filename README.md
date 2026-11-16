@@ -22,7 +22,20 @@ npm run inspect      # open the MCP Inspector UI against the server
 
 ## Using it from Claude Code
 
-The repo's `.mcp.json` registers it as `mcp-playground` (runs `dist/server.js`, so build first).
+This repo's `.mcp.json` registers the server as `mcp-playground`, so opening Claude Code in
+this folder offers it automatically (approve it when asked). It runs `dist/server.js`, so build first:
+
+```bash
+npm install && npm run build
+claude          # then /mcp to check it shows as connected
+```
+
+To use it from another folder, register it with an absolute path instead:
+
+```bash
+claude mcp add mcp-playground -- node /absolute/path/to/mcp-playground/dist/server.js
+```
+
 After changing the server, rebuild and restart the session (or reconnect the server) to pick up changes.
 
 ## Adding a tool
